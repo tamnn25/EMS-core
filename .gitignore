@@ -1,0 +1,129 @@
+# ============================================
+# .gitignore cho Project EMS - Java Core
+# ============================================
+
+# ========== JAVA BUILT FILES ==========
+# Compiled class files
+*.class
+
+# Package Files
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# ========== IDE FILES ==========
+# Eclipse
+.project
+.classpath
+.settings/
+bin/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# NetBeans
+nbproject/
+nbactions.xml
+build/
+dist/
+nbbuild/
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# ========== MAVEN ==========
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# ========== GRADLE ==========
+.gradle/
+build/
+
+# ========== LOG FILES ==========
+*.log
+logs/
+log/
+
+# ========== OPERATING SYSTEM ==========
+# Windows
+Thumbs.db
+Desktop.ini
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
+
+# ========== DATABASE FILES ==========
+*.db
+*.sql
+*.sqlite
+data/
+database/
+
+# ========== CONFIG FILES (KHÔNG NÊN COMMIT) ==========
+*.properties
+*.config
+*.cfg
+config/
+configuration/
+
+# ========== BACKUP FILES ==========
+*.bak
+*.backup
+*.old
+
+# ========== TEMPORARY FILES ==========
+*.tmp
+*.temp
+temp/
+tmp/
+
+# ========== EMS SPECIFIC FILES ==========
+# Data files (nên lưu trong database thực tế)
+employees.dat
+departments.dat
+*.dat
+*.ser
+
+# Backup directories
+backup_*/
+
+# Report files (có thể tạo lại)
+reports/
+exports/
+
+# Upload files
+uploads/
+
+# ========== ENVIRONMENT FILES ==========
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ========== SYSTEM FILES ==========
+*.swp
+*.swo
+*~
