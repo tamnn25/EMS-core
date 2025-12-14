@@ -1,43 +1,47 @@
 Tôi sẽ giúp bạn hoàn thiện dự án EMS với đầy đủ code cho tất cả các class và method. Dưới đây là toàn bộ code chi tiết:
 
 ## **I. CẤU TRÚC DỰ ÁN HOÀN CHỈNH**
+
+```text
 employee.management.system/
 ├── main/
-│   ├── Main.java                    # Entry point
-│   └── EMSApp.java                  # Main application
+│   ├── Main.java                # Entry point (chạy chương trình)
+│   └── EMSApp.java              # Khởi tạo và điều phối ứng dụng
 │
-├── model/                           # OOP, Class, Object
-│   ├── Employee.java                # Base class (Inheritance)
-│   ├── FullTimeEmployee.java        # Child class
-│   ├── PartTimeEmployee.java        # Child class
-│   ├── Manager.java                 # Child class
-│   └── Department.java              # Composition
+├── model/                       # OOP: Class, Object, Inheritance
+│   ├── Employee.java            # Lớp cha (Base class)
+│   ├── FullTimeEmployee.java    # Nhân viên toàn thời gian
+│   ├── PartTimeEmployee.java    # Nhân viên bán thời gian
+│   ├── Manager.java             # Quản lý (kế thừa Employee)
+│   └── Department.java          # Phòng ban (Composition)
 │
-├── dao/                             # Data Access (Collections)
-│   ├── EmployeeDAO.java             # CRUD với List
-│   ├── DepartmentDAO.java           # CRUD với Map
-│   └── FileDataManager.java         # File I/O, Exception
+├── dao/                         # Data Access Layer (Collections / File)
+│   ├── EmployeeDAO.java         # CRUD Employee với List
+│   ├── DepartmentDAO.java       # CRUD Department với Map
+│   └── FileDataManager.java     # Đọc/Ghi file, xử lý Exception
 │
-├── service/                         # Business Logic
-│   ├── EmployeeService.java         # Xử lý nghiệp vụ
-│   ├── SalaryService.java           # Tính toán lương
-│   └── ReportService.java           # Báo cáo
+├── service/                     # Business Logic Layer
+│   ├── EmployeeService.java     # Xử lý nghiệp vụ Employee
+│   ├── SalaryService.java       # Tính toán lương
+│   └── ReportService.java       # Báo cáo, thống kê
 │
-├── util/                            # Utilities
-│   ├── Validator.java               # Validation
-│   ├── DateUtils.java               # Date-Time API
-│   ├── Constants.java               # Constants
-│   └── CustomExceptions/            # Exception Handling
-│       ├── EmployeeNotFoundException.java
-│       ├── InvalidDataException.java
-│       └── DatabaseException.java
+├── util/                        # Utilities
+│   ├── Validator.java           # Validate dữ liệu đầu vào
+│   ├── DateUtils.java           # Xử lý Date-Time API
+│   └── Constants.java           # Hằng số dùng chung
 │
-├── ui/                              # User Interface
-│   ├── ConsoleUI.java               # Console interface
-│   └── MenuManager.java             # Menu system
+├── exception/                   # Custom Exception Handling
+│   ├── EmployeeNotFoundException.java
+│   ├── InvalidDataException.java
+│   └── DatabaseException.java
 │
-└── test/                            # Unit Testing
-    └── EmployeeServiceTest.java
+├── ui/                          # User Interface (Console)
+│   ├── ConsoleUI.java           # Giao diện console
+│   └── MenuManager.java         # Quản lý menu, điều hướng
+│
+└── test/                        # Unit Testing
+    └── EmployeeServiceTest.java # Test nghiệp vụ Employee
+```
 
 ### **1. File: Main.java**
 ```java
