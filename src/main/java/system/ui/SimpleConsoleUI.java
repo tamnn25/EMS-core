@@ -1,4 +1,4 @@
-package src.main.java.system.ui;
+package system.ui;
 
 public class SimpleConsoleUI {
 }

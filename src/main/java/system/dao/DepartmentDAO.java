@@ -1,4 +1,4 @@
-package src.main.java.system.dao;
+package system.dao;
 
 public class DepartmentDAO {
 

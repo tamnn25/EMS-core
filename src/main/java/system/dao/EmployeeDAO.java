@@ -1,6 +1,6 @@
-package src.main.java.system.dao;
+package system.dao;
 
-import src.main.java.system.model.Employee;
+import system.model.Employee;
 import java.util.ArrayList;
 import java.util.List;
 

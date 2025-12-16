@@ -1,4 +1,4 @@
-package src.main.java.system.constant;
+package system.constant;
 
 // Enum
 public enum EmployeeType {

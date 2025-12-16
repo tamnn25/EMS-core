@@ -1,6 +1,6 @@
-package src.main.java.system.main;
+package system.main;
 
-import src.main.java.system.ui.ConsoleUI;
+import system.ui.ConsoleUI;
 
 public class Main {
     public static void main(String[] args) {

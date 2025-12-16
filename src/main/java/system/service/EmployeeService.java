@@ -1,4 +1,4 @@
-package src.main.java.system.service;
+package system.service;
 
 public class EmployeeService {
 

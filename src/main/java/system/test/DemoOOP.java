@@ -1,6 +1,6 @@
-package src.main.java.system.test;
+package system.test;
 
-import src.main.java.system.model.FullTimeEmployee;
+import system.model.FullTimeEmployee;
 
 import java.time.LocalDate;
 

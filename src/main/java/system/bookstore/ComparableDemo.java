@@ -1,7 +1,7 @@
-package src.main.java.system.bookstore;
+package system.bookstore;
 
-import src.main.java.system.bookstore.Book;
-import src.main.java.system.bookstore.Student;
+import system.bookstore.Book;
+import system.bookstore.Student;
 import java.util.*;
 
 public class ComparableDemo {

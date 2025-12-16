@@ -1,7 +1,7 @@
-package src.main.java.system.ui;
+package system.ui;
 
-import src.main.java.system.model.*;
-import src.main.java.system.dao.EmployeeDAO;
+import system.model.*;
+import system.dao.EmployeeDAO;
 import java.util.List;
 import java.time.LocalDate;
 

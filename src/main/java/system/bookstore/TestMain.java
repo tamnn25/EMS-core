@@ -1,6 +1,6 @@
-package src.main.java.system.bookstore;
+package system.bookstore;
 
-import src.main.java.system.bookstore.ComparableDemo;
+import system.bookstore.ComparableDemo;
 
 public class TestMain {
     public static void main(String[] args) {

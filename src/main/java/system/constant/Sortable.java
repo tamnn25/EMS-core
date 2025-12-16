@@ -1,6 +1,6 @@
-package src.main.java.system.constant;
+package system.constant;
 
-import src.main.java.system.model.Employee;
+import system.model.Employee;
 
 // Interface
 public interface Sortable {

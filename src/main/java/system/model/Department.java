@@ -1,4 +1,4 @@
-package src.main.java.system.model;
+package system.model;
 
 public class Department {
     private String id;

@@ -1,4 +1,4 @@
-package src.main.java.system.util.CustomExceptions;
+package system.util.CustomExceptions;
 
 public class EmployeeNotFoundException extends Exception {
 	private String employeeId;

@@ -1,7 +1,7 @@
-package src.main.java.system.bookstore;
+package system.bookstore;
 
 
-import src.main.java.system.bookstore.MyComparable;
+import system.bookstore.MyComparable;
 import java.util.*;
 
 public class GenericSorter {

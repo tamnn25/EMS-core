@@ -1,4 +1,4 @@
-package src.main.java.system.constant;
+package system.constant;
 
 public interface Comparable<A> {
     int compareTo(A o);

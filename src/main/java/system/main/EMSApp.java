@@ -1,4 +1,4 @@
-package src.main.java.system.main;
+package system.main;
 
 public class EMSApp {
 

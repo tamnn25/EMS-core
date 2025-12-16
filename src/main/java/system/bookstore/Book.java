@@ -1,6 +1,6 @@
-package src.main.java.system.bookstore;
+package system.bookstore;
 
-import src.main.java.system.bookstore.MyComparable;
+import system.bookstore.MyComparable;
 
 public class Book implements MyComparable<Book> {
     // 1. Fields (Encapsulation - Tính đóng gói)

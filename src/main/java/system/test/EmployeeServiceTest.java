@@ -1,4 +1,4 @@
-package src.main.java.system.test;
+package system.test;
 
 public class EmployeeServiceTest {
     
