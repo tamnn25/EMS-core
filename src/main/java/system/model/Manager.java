@@ -11,6 +11,7 @@ public class Manager extends FullTimeEmployee {
                    Department department, double monthlySalary) {
         super(id, name, email, phone, birthDate, hireDate, department, monthlySalary);
         this.managementBonus = 2000000;
+        this.teamSize = 0;
     }
 
     @Override

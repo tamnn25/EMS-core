@@ -9,6 +9,5 @@ public abstract class SortableEmployee implements Comparable<Employee> {
     @Override
     public int compareTo(Employee E){
         return 1;
-//        return this.name.compareTo(E.getName());
     }
 }

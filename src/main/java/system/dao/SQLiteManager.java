@@ -59,10 +59,4 @@ public class SQLiteManager {
             e.printStackTrace();
         }
     }
-
-    // Main method for quick testing
-    public static void main(String[] args) {
-        initializeDatabase();
-        insertSampleData();
-    }
 }

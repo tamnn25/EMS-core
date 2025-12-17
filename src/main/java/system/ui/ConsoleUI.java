@@ -31,7 +31,6 @@ public class ConsoleUI {
         // Tạo phòng ban
         Department itDept = new Department("D001", "IT", "Phòng Công nghệ thông tin");
         Department hrDept = new Department("D002", "HR", "Phòng Nhân sự");
-
         Department acdept = new Department("Ac01", "Ac", "Phòng kế Toán");
 
         // Tạo các loại nhân viên khác nhau (Đa hình)

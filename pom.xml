@@ -30,29 +30,44 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- Spark Java: lightweight web framework to build HTTP APIs
+         - Handles routing (GET, POST, PUT, DELETE)
+         - Starts embedded Jetty server automatically
+         - Good for Java Core projects (no Spring) -->
         <dependency>
             <groupId>com.sparkjava</groupId>
             <artifactId>spark-core</artifactId>
             <version>2.9.4</version>
         </dependency>
 
+        <!-- Gson: JSON library from Google
+             - Converts Java objects -> JSON (toJson)
+             - Converts JSON -> Java objects (fromJson)
+             - Used in API responses (REST style) -->
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
             <version>2.10.1</version>
         </dependency>
 
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>2.0.9</version>
-        </dependency>
-
+        <!-- SLF4J Simple: logging implementation
+             - Prints logs to console (System.out)
+             - Required by Spark / Jetty to avoid SLF4J warnings
+             - Simple & lightweight (best for learning / small projects)
+             - IMPORTANT: Spark uses SLF4J 1.7.x internally
+               → Using 2.0.9 may cause version mismatch warnings -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
-            <version>2.0.9</version>
+            <version>1.7.36</version>
         </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>RELEASE</version>
+            <scope>provided</scope>
+        </dependency>
+
 
     </dependencies>
 

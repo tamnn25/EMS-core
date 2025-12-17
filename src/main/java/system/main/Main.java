@@ -18,6 +18,8 @@ public class Main {
         SQLiteManager.initializeDatabase();
         SQLiteManager.insertSampleData();
 
+
+
 //        ConsoleUI ui = new ConsoleUI();
 //        ui.start();
     }
