@@ -2,8 +2,8 @@ package system.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 public class SQLiteManager {
 
@@ -14,46 +14,38 @@ public class SQLiteManager {
         return DriverManager.getConnection(DB_URL);
     }
 
-    // Initialize the database (create table if not exists)
+    // Initialize the database (create tables)
     public static void initializeDatabase() {
-        try (Connection conn = getConnection()) {
-            if (conn != null) {
-                var stmt = conn.createStatement();
-                String sql = "CREATE TABLE IF NOT EXISTS employee (" +
-                        "id INTEGER PRIMARY KEY AUTOINCREMENT," +
-                        "name TEXT NOT NULL," +
-                        "position TEXT," +
-                        "salary REAL" +
-                        ");";
-                stmt.execute(sql);
-                System.out.println("Database initialized.");
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
-
-    // Insert sample data into the employee table
-    public static void insertSampleData() {
-        String sql = "INSERT INTO employee (name, position, salary) VALUES (?, ?, ?)";
         try (Connection conn = getConnection();
-             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+             Statement stmt = conn.createStatement()) {
 
-            // Sample employees
-            Object[][] employees = {
-                    {"Alice", "Manager", 8000.0},
-                    {"Bob", "Full-Time", 5000.0},
-                    {"Charlie", "Part-Time", 2500.0}
-            };
+            // Employee table
+            String employeeTable = "CREATE TABLE IF NOT EXISTS employee (" +
+                    "id TEXT PRIMARY KEY," +
+                    "name TEXT NOT NULL," +
+                    "email TEXT," +
+                    "phone TEXT," +
+                    "birth_date TEXT," +
+                    "hire_date TEXT," +
+                    "department_id TEXT," +
+                    "base_salary REAL," +
+                    "employee_type TEXT," +
+                    "bonus REAL," +
+                    "hours_worked REAL," +
+                    "FOREIGN KEY(department_id) REFERENCES department(id)" +
+                    ");";
 
-            for (Object[] emp : employees) {
-                pstmt.setString(1, (String) emp[0]);
-                pstmt.setString(2, (String) emp[1]);
-                pstmt.setDouble(3, (Double) emp[2]);
-                pstmt.executeUpdate();
-            }
+            // Department table
+            String departmentTable = "CREATE TABLE IF NOT EXISTS department (" +
+                    "id TEXT PRIMARY KEY," +
+                    "name TEXT NOT NULL," +
+                    "description TEXT" +
+                    ");";
 
-            System.out.println("Sample data inserted successfully.");
+            stmt.execute(employeeTable);
+            stmt.execute(departmentTable);
+
+            System.out.println("Database initialized.");
 
         } catch (SQLException e) {
             e.printStackTrace();

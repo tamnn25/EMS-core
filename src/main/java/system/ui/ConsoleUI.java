@@ -99,8 +99,8 @@ public class ConsoleUI {
         // Thống kê
         System.out.println("\n📊 THỐNG KÊ:");
         System.out.println("• Tổng số nhân viên: " + employees.size());
-        System.out.println("• Tổng chi phí lương: " +
-                String.format("%,.0f VND", dao.getTotalSalaryExpense()));
+//        System.out.println("• Tổng chi phí lương: " +
+//                String.format("%,.0f VND", dao.getTotalSalaryExpense()));
     }
 
     private void demonstrateOOPFeatures(EmployeeDAO dao) {
@@ -139,5 +139,13 @@ public class ConsoleUI {
             emp.setName("Nguyễn Văn A (Đã đổi tên)");
             System.out.println("• Sau: " + emp.getName());
         }
+    }
+
+    public void createDataAndShow() {
+        Department dpm = new Department("01", "HR", "manage employee");
+
+        FullTimeEmployee empFull = new FullTimeEmployee("f01", "Lee", "lee@gmail.com", null, null, null, dpm, 4000);
+        empFull.calculateSalary();
+        empFull.displayInfo();
     }
 }

@@ -16,11 +16,11 @@ public class Main {
         System.out.println("🚀 Khởi động hệ thống quản lý nhân viên...");
 
         SQLiteManager.initializeDatabase();
-        SQLiteManager.insertSampleData();
+//        SQLiteManager.insertSampleData();
 
+        ConsoleUI ui = new ConsoleUI();
+        ui.createDataAndShow();
 
-
-//        ConsoleUI ui = new ConsoleUI();
 //        ui.start();
     }
 }

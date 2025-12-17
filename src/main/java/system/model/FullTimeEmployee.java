@@ -11,7 +11,7 @@ public class FullTimeEmployee extends Employee {
                             Department department, double monthlySalary) {
         super(id, name, email, phone, birthDate, hireDate, department, monthlySalary);
         this.monthlySalary = monthlySalary;
-        this.bonus = 0;
+        this.bonus = 20;
     }
 
     @Override
