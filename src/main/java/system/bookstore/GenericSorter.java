@@ -24,10 +24,16 @@ public class GenericSorter {
 
         T min = list.get(0);
         for (T item : list) {
+
+//            System.out.println("student " + item);
+
+//            System.out.println("findmin method" + item.compareTo(min));
+
             if (item.compareTo(min) < 0) {
                 min = item;
             }
         }
+        System.out.println("T from interface" + min);
         return min;
     }
 

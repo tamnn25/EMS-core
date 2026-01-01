@@ -33,6 +33,13 @@ public class Student implements MyComparable<Student> {
     // Implement MyComparable interface
     @Override
     public int compareTo(Student other) {
+//
+//        System.out.println("instance " + this.name);
+//
+//        System.out.println("value param " + other.name);
+//
+//        System.out.println(this.name.compareTo(other.name));
+
         // Natural ordering: So sánh theo tên
         return this.name.compareTo(other.name);
     }

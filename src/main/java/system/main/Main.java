@@ -15,12 +15,12 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("🚀 Khởi động hệ thống quản lý nhân viên...");
 
-        SQLiteManager.initializeDatabase();
+//        SQLiteManager.initializeDatabase();
 //        SQLiteManager.insertSampleData();
 
         ConsoleUI ui = new ConsoleUI();
-        ui.createDataAndShow();
+//        ui.createDataAndShow();
 
-//        ui.start();
+        ui.start();
     }
 }

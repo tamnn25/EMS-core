@@ -1,10 +1,17 @@
 package system.model;
 
+import lombok.Getter;
+import lombok.Setter;
+import system.constant.EmployeeType;
+
 import java.time.LocalDate;
 
+@Setter
+@Getter
 public class FullTimeEmployee extends Employee {
     private double monthlySalary;
     private double bonus;
+    private final EmployeeType employeeType;
 
     public FullTimeEmployee(String id, String name, String email, String phone,
                             LocalDate birthDate, LocalDate hireDate,
@@ -12,6 +19,7 @@ public class FullTimeEmployee extends Employee {
         super(id, name, email, phone, birthDate, hireDate, department, monthlySalary);
         this.monthlySalary = monthlySalary;
         this.bonus = 20;
+        this.employeeType = EmployeeType.FULL_TIME;
     }
 
     @Override
@@ -21,7 +29,10 @@ public class FullTimeEmployee extends Employee {
 
     @Override
     public String getEmployeeType() {
-        return "Full-Time";
+        if (this.employeeType == EmployeeType.FULL_TIME){
+            return "Full-Time";
+        }
+        return "Part-Time";
     }
 
     public void setBonus(double bonus) {

@@ -8,8 +8,17 @@ public class ComparableDemo {
     public static void main(String[] args) {
         System.out.println("=== DEMO COMPARABLE INTERFACE ===\n");
 
+        List<Student> listStudents = List.of(
+                new Student("01", "stu01", 5, 1),
+                new Student("01", "stu02", 5, 1)
+        );
+
+        Student min = GenericSorter.findMin(listStudents);
+
+        System.out.println(min);
+
         // Demo với Book
-        demoBookComparable();
+//        demoBookComparable();
 
 //        System.out.println("\n" + "=".repeat(50) + "\n");
 

@@ -39,31 +39,30 @@ public class ConsoleUI {
                 LocalDate.of(1990, 5, 15), LocalDate.of(2020, 1, 10),
                 itDept, 15000000
         );
-
-        Employee emp2 = new PartTimeEmployee(
-                "E002", "Trần Thị B", "ttb@company.com", "0923456789",
-                LocalDate.of(1995, 8, 22), LocalDate.of(2021, 3, 15),
-                hrDept, 50000
-        );
-
-        Employee empAc = new FullTimeEmployee(
-                "AC001", "Nguyễn kế Toán", "ac@gmail.com", "09879877654" ,
-                LocalDate.of(1990, 1, 1), LocalDate.of(2025, 1,1), acdept, 40000000
-        );
-        ((PartTimeEmployee) emp2).addHoursWorked(120);
-
-        Employee emp3 = new Manager(
-                "E003", "Lê Văn C", "lvc@company.com", "0934567890",
-                LocalDate.of(1985, 3, 30), LocalDate.of(2018, 6, 1),
-                itDept, 25000000
-        );
-        ((Manager) emp3).setTeamSize(5);
-
-        // Thêm vào hệ thống
+//
+//        Employee emp2 = new PartTimeEmployee(
+//                "E002", "Trần Thị B", "ttb@company.com", "0923456789",
+//                LocalDate.of(1995, 8, 22), LocalDate.of(2021, 3, 15),
+//                hrDept, 50000
+//        );
+//
+////        Employee empAc = new FullTimeEmployee(
+////                "AC001", "Nguyễn kế Toán", "ac@gmail.com", "09879877654" ,
+////                LocalDate.of(1990, 1, 1), LocalDate.of(2025, 1,1), acdept, 40000000
+////        );
+//        ((PartTimeEmployee) emp2).addHoursWorked(120);
+//
+//        Employee emp3 = new Manager(
+//                "E003", "Lê Văn C", "lvc@company.com", "0934567890",
+//                LocalDate.of(1985, 3, 30), LocalDate.of(2018, 6, 1),
+//                itDept, 25000000
+//        );
+//        ((Manager) emp3).setTeamSize(5);
+//
+//        // Thêm vào hệ thống
         dao.addEmployee(emp1);
-        dao.addEmployee(emp2);
-        dao.addEmployee(emp3);
-        dao.addEmployee(empAc);
+//        dao.addEmployee(emp2);
+//        dao.addEmployee(emp3);
 
         System.out.println("Đã tạo 3 nhân viên mẫu thành công!");
     }
@@ -143,7 +142,6 @@ public class ConsoleUI {
 
     public void createDataAndShow() {
         Department dpm = new Department("01", "HR", "manage employee");
-
         FullTimeEmployee empFull = new FullTimeEmployee("f01", "Lee", "lee@gmail.com", null, null, null, dpm, 4000);
         empFull.calculateSalary();
         empFull.displayInfo();

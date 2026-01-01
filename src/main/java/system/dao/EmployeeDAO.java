@@ -13,19 +13,20 @@ public class EmployeeDAO {
 
     // Insert employee
     public void addEmployee(Employee emp) {
-        String sql = "INSERT INTO employee (id, name, email, phone, birthDate, hireDate, department, baseSalary, employeeType) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO employee " +
+                "(name, email, phone, birth_date, hire_date, baseSalary, employeeType) " +
+                "VALUES (?, ?, ?, ?, ?, ?, ?)";
+
         try (Connection conn = SQLiteManager.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
-            pstmt.setString(1, emp.getId());
-            pstmt.setString(2, emp.getName());
-            pstmt.setString(3, emp.getEmail());
-            pstmt.setString(4, emp.getPhone());
-            pstmt.setString(5, emp.getBirthDate().toString());
-            pstmt.setString(6, emp.getHireDate().toString());
-            pstmt.setString(7, emp.getDepartment() != null ? emp.getDepartment().getName() : null);
-            pstmt.setDouble(8, emp.getBaseSalary());
-            pstmt.setString(9, emp.getEmployeeType());
+            pstmt.setString(1, emp.getName());
+            pstmt.setString(2, emp.getEmail());
+            pstmt.setString(3, emp.getPhone());
+            pstmt.setString(4, emp.getBirthDate().toString());
+            pstmt.setString(5, emp.getHireDate().toString());
+            pstmt.setDouble(6, emp.getBaseSalary());
+            pstmt.setString(7, emp.getEmployeeType());
 
             pstmt.executeUpdate();
 
@@ -50,9 +51,9 @@ public class EmployeeDAO {
                         rs.getString("name"),
                         rs.getString("email"),
                         rs.getString("phone"),
-                        LocalDate.parse(rs.getString("birthDate")),
-                        LocalDate.parse(rs.getString("hireDate")),
-                        new Department(rs.getString("department"), rs.getString("department"), ""),
+                        LocalDate.parse(rs.getString("birth_date")),
+                        LocalDate.parse(rs.getString("hire_date")),
+                        new Department(rs.getString("department_id"), rs.getString("department_id"), ""),
                         rs.getDouble("baseSalary")
                 );
                 list.add(emp);
